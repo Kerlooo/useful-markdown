@@ -3,7 +3,7 @@
 
 ---
 
-## 📦 Installazione di `p7zip`  
+## Installazione di `p7zip`  
 Su Arch Linux, installa il pacchetto:  
 ```bash
 sudo pacman -S p7zip
@@ -11,7 +11,7 @@ sudo pacman -S p7zip
 
 ---
 
-## 🔐 Creare un nuovo archivio cifrato  
+## Creare un nuovo archivio cifrato  
 ```bash
 7z a -p -mhe=on archivio_privato.7z ~/cartella_o_file_da_criptare
 ```
@@ -27,7 +27,7 @@ sudo pacman -S p7zip
 
 ---
 
-## ➕ Aggiungere file a un archivio esistente  
+## Aggiungere file a un archivio esistente  
 ```bash
 7z u -p -mhe=on archivio_privato.7z ~/nuovo_file
 ```
@@ -40,7 +40,7 @@ sudo pacman -S p7zip
 
 ---
 
-## 📂 Estrazione dei file  
+## Estrazione dei file  
 ```bash
 7z x -p archivio_privato.7z
 ```
@@ -48,26 +48,26 @@ sudo pacman -S p7zip
 
 ---
 
-## 🛠️ Altre operazioni utili  
+## Altre operazioni utili  
 
-### 🔍 Listare i file nell'archivio (senza estrarre)  
+### Listare i file nell'archivio (senza estrarre)  
 ```bash
 7z l -p archivio_privato.7z
 ```
 
-### ❌ Eliminare un file dall'archivio  
+### Eliminare un file dall'archivio  
 ```bash
 7z d -p archivio_privato.7z file_da_rimuovere.txt
 ```
 
-### ✅ Verificare l'integrità dell'archivio  
+### Verificare l'integrità dell'archivio  
 ```bash
 7z t archivio_privato.7z
 ```
 
 ---
 
-## ⚠️ Note importanti  
+## Note importanti  
 1. **`-mhe=on`** è essenziale per cifrare i nomi dei file (senza, sono visibili senza password!).  
 2. **Non perdere la password**: Senza di essa, i dati saranno irrecuperabili.  
 3. Per archivi molto grandi, puoi disattivare la compressione per velocizzare:  
@@ -78,7 +78,7 @@ sudo pacman -S p7zip
 
 ---
 
-## 🔄 Automatizzare con uno script (opzionale)  
+## Automatizzare con uno script (opzionale)  
 Crea un file `backup_privato.sh`:  
 ```bash
 #!/bin/bash  
@@ -95,12 +95,12 @@ Esegui lo script quando necessario:
 
 ---
 
-✅ **Vantaggi**:  
+**Vantaggi**:  
 - Portabile (apribile con 7-Zip su Windows/macOS).  
 - Sicurezza AES-256.  
 - Facile da aggiornare con nuovi file.  
 
-📁 **Alternativa avanzata**: Per una cartella sempre sincronizzata e cifrata, considera `gocryptfs` o `encfs` ([vedi guida completa](#)).  
+**Alternativa avanzata**: Per una cartella sempre sincronizzata e cifrata, considera `gocryptfs` o `encfs` ([vedi guida completa](#)).  
 ```
 
 ### Come usare questo file?  
